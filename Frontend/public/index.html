@@ -1,0 +1,122 @@
+<!-- Add this to your existing index.html file -->
+<!-- Hudhud Chat Widget -->
+<div id="hudhud-chat-widget" class="chat-widget">
+    <div class="chat-header">
+        <div class="chat-info">
+            <h3>Hudhud Chat</h3>
+            <span class="online-indicator">• Online</span>
+        </div>
+        <div class="chat-actions">
+            <button id="minimize-chat" class="chat-btn">
+                <i class="fas fa-minus"></i>
+            </button>
+            <button id="close-chat" class="chat-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    
+    <div class="chat-body">
+        <div class="channels-sidebar">
+            <div class="channels-list">
+                <div class="channel active" data-channel="general">
+                    <i class="fas fa-hashtag"></i>
+                    <span>General</span>
+                </div>
+                <div class="channel" data-channel="quran-studies">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Quran Studies</span>
+                </div>
+                <div class="channel" data-channel="islamic-finance">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Islamic Finance</span>
+                </div>
+                <div class="channel" data-channel="arabic-language">
+                    <i class="fas fa-hashtag"></i>
+                    <span>Arabic Language</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="messages-container">
+            <div class="messages-header">
+                <h4 id="current-channel">General</h4>
+                <div class="channel-actions">
+                    <button class="action-btn" title="Video Call">
+                        <i class="fas fa-video"></i>
+                    </button>
+                    <button class="action-btn" title="Search">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <div class="messages-list" id="messages-list">
+                <!-- Messages will be loaded here -->
+            </div>
+            
+            <div class="message-input-container">
+                <div class="input-actions">
+                    <button class="action-btn" title="Attach File">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <button class="action-btn" title="Emoji">
+                        <i class="fas fa-smile"></i>
+                    </button>
+                </div>
+                <input type="text" id="message-input" placeholder="Type a message..." maxlength="1000">
+                <button id="send-message" class="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<button id="open-chat-widget" class="chat-widget-toggle">
+    <i class="fas fa-comments"></i>
+    <span class="notification-badge">0</span>
+</button>
+
+<!-- Video Call Modal -->
+<div id="video-call-modal" class="modal video-call-modal" style="display: none;">
+    <div class="modal-content">
+        <div class="call-header">
+            <h3>Video Call</h3>
+            <div class="call-info">
+                <span id="call-status">Connecting...</span>
+                <span id="call-timer">00:00</span>
+            </div>
+            <button class="modal-close" onclick="closeVideoCall()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="video-container">
+            <div class="remote-video">
+                <video id="remote-video" autoplay playsinline></video>
+                <div class="video-overlay">
+                    <span id="remote-user-name">Remote User</span>
+                </div>
+            </div>
+            <div class="local-video">
+                <video id="local-video" autoplay playsinline muted></video>
+            </div>
+        </div>
+        
+        <div class="call-controls">
+            <button id="mute-audio" class="control-btn">
+                <i class="fas fa-microphone"></i>
+            </button>
+            <button id="mute-video" class="control-btn">
+                <i class="fas fa-video"></i>
+            </button>
+            <button id="share-screen" class="control-btn">
+                <i class="fas fa-desktop"></i>
+            </button>
+            <button id="end-call" class="control-btn end-call">
+                <i class="fas fa-phone-slash"></i>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,2572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HUDHUD ISLAMIC COLLEGE</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" referrerpolicy="no-referrer" />
+  <meta name="description" content="Hudhud Islamic College - Quality Islamic education with modern academic programs. Apply now for certificate, diploma and degree programs.">
+</head>
+<body>
+  <!-- Loading Overlay -->
+  <div id="loading" class="loading-overlay" style="display: none;">
+    <div class="loading-spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Hudhud Chatbot -->
+  <div id="hudhud-chatbot" class="hudhud-chatbot">
+    <div class="chatbot-header">
+      <h3>Hudhud Assistant</h3>
+      <button id="close-chatbot" class="chatbot-close">&times;</button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="message bot-message">
+        <p>Hello! Welcome to HUDHUD ISLAMIC COLLEGE. How can I help you today?</p>
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Type your message here..." id="chatbot-input">
+      <button id="send-message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button id="open-chatbot" class="chatbot-toggle">
+    <i class="fas fa-comment"></i>
+  </button>
+
+  <!-- World Time Zone Display -->
+  <div class="time-zone-bar">
+    <div class="container">
+      <div class="time-zone-content">
+        <span id="current-time"></span>
+        <span id="current-date"></span>
+        <span id="ethiopian-date"></span>
+        <span id="makkah-time"></span>
+        <span id="islamic-date"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcement Bar -->
+  <div class="announcement">
+    <p>Admissions Open for 2025 Academic Year! <a href="#apply">Apply Now <i class="fas fa-arrow-right"></i></a></p>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="brand">
+        <img src="hudhud new logo.png" alt="Hudhud Islamic College Logo" class="logo"/>
+        <div class="brand-text">
+          <h1>HUDHUD ISLAMIC COLLEGE</h1>
+        </div>
+      </div>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <nav class="nav" id="mainNav">
+        <a href="#home" class="nav-link"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="#about" class="nav-link"><i class="fa-solid fa-circle-info"></i><span>About</span></a>
+        <a href="#programs" class="nav-link"><i class="fa-solid fa-graduation-cap"></i><span>Programs</span></a>
+        <a href="#documents" class="nav-link"><i class="fa-solid fa-file-contract"></i><span>Documents</span></a>
+        <a href="#live-classes" class="nav-link"><i class="fa-solid fa-video"></i><span>Live</span></a>
+        <a href="#apply" class="nav-link"><i class="fa-solid fa-file-signature"></i><span>Apply</span></a>
+        <a href="#donate" class="nav-link"><i class="fa-solid fa-hand-holding-heart"></i><span>Donate</span></a>
+        <button id="openAuth" class="btn small auth-btn"><i class="fa-solid fa-user"></i><span id="authBtnLabel">Register / Login</span></button>
+      </nav>
+    </div>
+  </header>
+  <!-- Public Content (Visible to all) -->
+  <div id="public-content">
+    <!-- Hero slider -->
+    <section class="hero" id="home">
+      <div class="slider" id="slider">
+        <div class="slide current" style="--bg:url('hudhud\ 1.jpg');">
+          <div class="slide-content">
+            <h2>الْعِلْمُ يُؤْتَى وَلَا يَأْتِي</h2>
+            <h2>Learn. Build. Lead</h2>
+            <p>Future-Ready Education with real projects & community.</p>
+            <button class="btn primary" onclick="scrollToSection('apply')">Apply Now</button>
+          </div>
+        </div>
+        <div class="slide" style="--bg:url('hudhud\ 2.jpg');">
+          <div class="slide-content">
+            <h2>Live Classrooms</h2>
+            <p>Join interactive sessions from anywhere.</p>
+            <button class="btn primary" onclick="scrollToSection('documents')">Enter Live Class</button>
+          </div>
+        </div>
+        <div class="slide" style="--bg:url('one\ hud.jpg');">
+          <div class="slide-content">
+            <h2>Our Doors
+are OPEN, 24/7</h2>
+            <p>The HHIC goal has always been to empower anyone,
+from any place or any time, to access quality undergraduate,
+graduate and postgraduate level courses.
+
+We bring higher education to YOU.
+Earn your education without ever having to leave your home!</p>
+            <button class="btn primary" onclick="scrollToSection('apply')">Enroll Now</button>
+          </div>
+        </div>
+        <div class="slide" style="--bg:url('hud14.jpg');">
+          <div class="slide-content">
+            <h2>Make an Impact</h2>
+            <p>Do Not Forget The Children. Donate Sadaqa Or Zakat To Help Them From War, Disease & Hunger.</p>
+            <button class="btn primary" onclick="scrollToSection('donate')">Donate</button>
+          </div>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <button class="dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="dot" data-slide="3" aria-label="Slide 4"></button>
+      </div>
+    </section>
+
+    <!-- Quick Stats -->
+    <section class="quick-stats">
+      <div class="container">
+        <div class="stat-item">
+          <h3 data-target="1500">0</h3>
+          <p>Graduates</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-target="25">0</h3>
+          <p>Programs</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-target="8">0</h3>
+          <p>Live Classrooms</p>
+        </div>
+        <div class="stat-item">
+          <h3 data-target="100">0</h3>
+          <p>Quality Education</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-circle-info"></i> About Us</h2>
+        <div class="about-content">
+          <div class="about-text">
+            <p>Hudhud Islamic College is one of the few and the leading Islamic colleges in Ethiopia. We have been committed to propagating Islamic teaching and values by carrying out our tasks with academic excellence, ethics, and a sense of responsibility.</p>
+            <p>Since our establishment, we have successfully graduated over 1,500 students. These graduates have not only learned knowledge but also the values of compassion, integrity, and service to society.</p>
+            <div class="mission-vision">
+              <div class="mv-item">
+                <h4><i class="fas fa-eye"></i> Our Vision</h4>
+                <p>To be a center of excellence in Islamic education that nurtures future leaders.</p>
+              </div>
+              <div class="mv-item">
+                <h4><i class="fas fa-bullseye"></i> Our Mission</h4>
+                <p>To provide quality education that combines Islamic values with modern knowledge.</p>
+              </div>
+            </div>
+          </div>
+          <div class="about-image">
+            <img src="hudhud 6.jpg" alt="Hudhud Islamic College Campus">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Programs -->
+    <section id="programs" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-graduation-cap"></i> Academic Programs</h2>
+        <p class="section-subtitle">Choose from our diverse range of certificate, diploma and degree programs</p>
+        
+        <div class="program-tabs">
+          <button class="program-tab active" data-program="certificate">Certificate Programs</button>
+          <button class="program-tab" data-program="diploma">Diploma Programs</button>
+          <button class="program-tab" data-program="degree">Degree Programs</button>
+        </div>
+        
+        <div class="program-content active" id="certificate">
+          <div class="grid three">
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-laptop-code"></i>
+              </div>
+              <h3>Computer Skills</h3>
+              <p>Learn essential computer skills for modern workplaces</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-language"></i>
+              </div>
+              <h3>Language Studies</h3>
+              <p>Arabic and English language programs</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-paint-brush"></i>
+              </div>
+              <h3>Creative Design</h3>
+              <p>Graphic design and digital skills development</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="program-content" id="diploma">
+          <div class="grid three">
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-book-quran"></i>
+              </div>
+              <h3>Islamic Studies</h3>
+              <p>Higher Diploma in Islamic Studies</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-quran"></i>
+              </div>
+              <h3>Quranic Studies</h3>
+              <p>Comprehensive Quran learning programs</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Islamic Finance</h3>
+              <p>Islamic Financing and Management</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="program-content" id="degree">
+          <div class="grid three">
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-graduation-cap"></i>
+              </div>
+              <h3>Islamic Studies</h3>
+              <p>Bachelor of Arts in Islamic Studies</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-quran"></i>
+              </div>
+              <h3>Quran Memorization</h3>
+              <p>Bachelor of Quran Memorization</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="card program-card">
+              <div class="card-icon">
+                <i class="fas fa-coins"></i>
+              </div>
+              <h3>Islamic Economics</h3>
+              <p>Bachelor of Science in Islamic Economics</p>
+              <a href="#apply" class="card-link">Apply Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Services Section -->
+    <section id="documents" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-file-contract"></i> Professional Document Services</h2>
+        <p class="section-subtitle">Get professionally prepared research papers, proposals, and academic documents</p>
+        
+        <div class="document-services">
+          <div class="document-categories">
+            <div class="document-category active" data-category="research">
+              <i class="fas fa-book"></i>
+              <span>Research Papers</span>
+            </div>
+            <div class="document-category" data-category="proposals">
+              <i class="fas fa-file-alt"></i>
+              <span>Proposals</span>
+            </div>
+            <div class="document-category" data-category="thesis">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Thesis/Dissertation</span>
+            </div>
+            <div class="document-category" data-category="reports">
+              <i class="fas fa-chart-bar"></i>
+              <span>Reports</span>
+            </div>
+          </div>
+          
+          <div class="document-content active" id="research-content">
+            <div class="document-details">
+              <h3>Research Paper Services</h3>
+              <p>Our team of academic experts can help you with comprehensive research papers on various Islamic studies topics.</p>
+              <div class="features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Well-researched content</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Proper citation and references</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Original content guaranteed</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Timely delivery</span>
+                </div>
+              </div>
+              <div class="pricing">
+                <h4>Pricing</h4>
+                <div class="price-options">
+                  <div class="price-option">
+                    <span class="pages">5-10 pages</span>
+                    <span class="price">ETB 500-1000</span>
+                  </div>
+                  <div class="price-option">
+                    <span class="pages">11-20 pages</span>
+                    <span class="price">ETB 1000-1800</span>
+                  </div>
+                  <div class="price-option">
+                    <span class="pages">21+ pages</span>
+                    <span class="price">Custom Quote</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn primary" onclick="openOrderModal('Research Paper')">Order Now</button>
+            </div>
+            <div class="document-sample">
+              <div class="sample-header">
+                <h4>Sample Research Paper</h4>
+                <button class="btn small" onclick="downloadSample('research')">Download Sample</button>
+              </div>
+              <div class="sample-preview">
+                <img src="hudhud 4.jpg" alt="Research Paper Sample">
+              </div>
+            </div>
+          </div>
+          
+          <div class="document-content" id="proposals-content">
+            <div class="document-details">
+              <h3>Proposal Writing Services</h3>
+              <p>Professional proposal writing for academic projects, research grants, and business initiatives.</p>
+              <div class="features">
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Professional formatting</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Persuasive writing</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Budget planning assistance</span>
+                </div>
+                <div class="feature">
+                  <i class="fas fa-check-circle"></i>
+                  <span>Revisions included</span>
+                </div>
+              </div>
+              <div class="pricing">
+                <h4>Pricing</h4>
+                <div class="price-options">
+                  <div class="price-option">
+                    <span class="pages">Basic Proposal</span>
+                    <span class="price">ETB 800</span>
+                  </div>
+                  <div class="price-option">
+                    <span class="pages">Detailed Proposal</span>
+                    <span class="price">ETB 1500</span>
+                  </div>
+                  <div class="price-option">
+                    <span class="pages">Grant Proposal</span>
+                    <span class="price">ETB 2500+</span>
+                  </div>
+                </div>
+              </div>
+              <button class="btn primary" onclick="openOrderModal('Proposal')">Order Now</button>
+            </div>
+            <div class="document-sample">
+              <div class="sample-header">
+                <h4>Sample Proposal</h4>
+                <button class="btn small" onclick="downloadSample('proposal')">Download Sample</button>
+              </div>
+              <div class="sample-preview">
+                <img src="hudhud 3.jpg" alt="Proposal Sample">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	  
+	  <!-- Add this section after the existing content in index.html -->
+<!-- Exam Results Section -->
+<section id="exam-results" class="section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Exam Results</h2>
+    <p class="section-subtitle">Check your examination results and grades</p>
+    
+    <div class="results-container card">
+      <div class="results-header">
+        <h3>Student Result Portal</h3>
+        <p>Enter your details to check your exam results</p>
+      </div>
+      
+      <form id="resultsForm" class="form">
+        <div class="form-group">
+          <label for="student-id">Student ID Number *</label>
+          <input type="text" id="student-id" name="studentId" required 
+                 placeholder="Enter your ID " 
+                 pattern="HHIC\d{2}\/\d{2}">
+          <small class="form-hint"></small>
+        </div>
+        
+        <div class="form-group">
+          <label for="student-name">Student First Name *</label>
+          <input type="text" id="student-name" name="studentName" required 
+                 placeholder="Enter your first name as registered">
+        </div>
+        
+        <button type="submit" class="btn primary full-width">
+          <i class="fas fa-search"></i> Check Results
+        </button>
+      </form>
+      
+      <div id="results-display" class="results-display" style="display: none;">
+        <div class="results-header success">
+          <i class="fas fa-check-circle"></i>
+          <h3>Results Found!</h3>
+        </div>
+        
+        <div class="student-info">
+          <div class="info-item">
+            <span class="label">Student ID:</span>
+            <span id="result-id" class="value">HHIC01/24</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Name:</span>
+            <span id="result-name" class="value">Najwa Abdalla Ali</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Program:</span>
+            <span id="result-program" class="value">Bachelor of Arts in Islamic Studies</span>
+          </div>
+          <div class="info-item">
+            <span class="label">Academic Year:</span>
+            <span id="result-year" class="value">2024/2026</span>
+          </div>
+        </div>
+        
+        <div class="grades-table">
+          <h4>Examination Results</h4>
+          <table>
+            <thead>
+              <tr>
+                <th>Course Code</th>
+                <th>Course Name</th>
+                <th>Credit Hours</th>
+                <th>Grade</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="grades-body">
+              <!-- Results will be populated by JavaScript -->
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="results-summary">
+          <div class="summary-item">
+            <span class="label">Semester GPA:</span>
+            <span id="result-gpa" class="value">3.75</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Cumulative GPA:</span>
+            <span id="result-cgpa" class="value">3.68</span>
+          </div>
+          <div class="summary-item">
+            <span class="label">Academic Standing:</span>
+            <span id="result-standing" class="value good">Good Standing</span>
+          </div>
+        </div>
+        
+        <div class="results-actions">
+          <button class="btn secondary" onclick="printResults()">
+            <i class="fas fa-print"></i> Print Results
+          </button>
+          <button class="btn secondary" onclick="downloadResults()">
+            <i class="fas fa-download"></i> Download PDF
+          </button>
+        </div>
+      </div>
+      
+      <div id="results-error" class="results-error" style="display: none;">
+        <div class="error-header">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>No Results Found</h3>
+        </div>
+        <p>We couldn't find any results matching your information. Please check:</p>
+        <ul>
+          <li>Your Student ID is in the correct format (HHICXX/YY)</li>
+          <li>Your first name matches our records exactly</li>
+          <li>You have completed examinations for this semester</li>
+        </ul>
+        <p>If you continue to experience issues, please contact the administration office.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Live Classes Section -->
+    <section id="live-classes" class="section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-video"></i> Live Classes</h2>
+        <p class="section-subtitle">Join our interactive online classes via Google Meet and Zoom</p>
+        
+        <div class="login-required-message" id="live-classes-login-message">
+          <div class="login-message-content">
+            <i class="fas fa-lock"></i>
+            <h3>Login Required</h3>
+            <p>Please login to access live classes and join interactive sessions.</p>
+            <button class="btn primary" onclick="openModal('authModal')">Login Now</button>
+          </div>
+        </div>
+        
+        <div class="live-classes-container" id="live-classes-content" style="display: none;">
+          <div class="live-class-card">
+            <div class="live-class-header">
+              <h3>Quranic Studies</h3>
+              <span class="live-badge">Live Now</span>
+            </div>
+            <div class="live-class-info">
+              <p><i class="fas fa-clock"></i> 9:00 AM - 10:30 AM</p>
+              <p><i class="fas fa-user"></i> Instructor: Sheikh Mohammed Awal</p>
+              <p><i class="fas fa-users"></i> 45 Students Joined</p>
+            </div>
+            <div class="live-class-actions">
+              <a href="https://meet.google.com" class="btn primary" target="_blank">Join via Google Meet</a>
+              <a href="https://zoom.us" class="btn secondary" target="_blank">Join via Zoom</a>
+            </div>
+          </div>
+          
+          <div class="live-class-card">
+            <div class="live-class-header">
+              <h3>Islamic Finance</h3>
+              <span class="upcoming-badge">Upcoming</span>
+            </div>
+            <div class="live-class-info">
+              <p><i class="fas fa-clock"></i> 11:00 AM - 12:30 PM</p>
+              <p><i class="fas fa-user"></i> Instructor: Dr. Jemal Yusuf</p>
+              <p><i class="fas fa-users"></i> Starts in 1 hour 15 minutes</p>
+            </div>
+            <div class="live-class-actions">
+              <button class="btn secondary" onclick="setClassReminder('Islamic Finance')">Notify Me</button>
+            </div>
+          </div>
+          
+          <div class="live-class-card">
+            <div class="live-class-header">
+              <h3>Arabic Language</h3>
+              <span class="upcoming-badge">Upcoming</span>
+            </div>
+            <div class="live-class-info">
+              <p><i class="fas fa-clock"></i> 2:00 PM - 3:30 PM</p>
+              <p><i class="fas fa-user"></i> Instructor: Ustaz Sadam Usman</p>
+              <p><i class="fas fa-users"></i> Starts in 4 hours</p>
+            </div>
+            <div class="live-class-actions">
+              <button class="btn secondary" onclick="setClassReminder('Arabic Language')">Notify Me</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+	  
+<!-- Screen Recorder Toggle Button -->
+  <button id="open-recorder" class="recorder-toggle">
+    <i class="fas fa-video"></i>
+  </button>
+
+  <!-- Screen Recorder Modal -->
+  <div id="recorderModal" class="modal" style="display: none;">
+    <div class="modal-content recorder-modal">
+      <div class="modal-header">
+        <h2>Screen Recorder</h2>
+        <button class="modal-close" onclick="closeModal('recorderModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="recorder-container">
+          <div class="recorder-controls">
+            <div class="audio-settings">
+              <h3>Audio Sources</h3>
+              <div class="audio-options">
+                <div class="audio-option">
+                  <input type="checkbox" id="mic-audio" checked>
+                  <label for="mic-audio">
+                    <i class="fas fa-microphone"></i> Microphone
+                  </label>
+                  <div class="mic-test">
+                    <button id="test-mic" class="btn small"><i class="fas fa-play"></i></button>
+                    <div class="mic-level">
+                      <div class="level-bar"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="audio-option">
+                  <input type="checkbox" id="system-audio">
+                  <label for="system-audio">
+                    <i class="fas fa-volume-up"></i> System Audio
+                  </label>
+                </div>
+              </div>
+              
+              <div class="quality-settings">
+                <label for="audio-quality">Audio Quality:</label>
+                <select id="audio-quality">
+                  <option value="high">High</option>
+                  <option value="medium" selected>Medium</option>
+                  <option value="low">Low</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="recorder-buttons">
+              <button id="start-recording" class="btn primary">
+                <i class="fas fa-record-vinyl"></i> Start Recording
+              </button>
+              <button id="pause-recording" class="btn secondary" disabled>
+                <i class="fas fa-pause"></i> Pause
+              </button>
+              <button id="stop-recording" class="btn danger" disabled>
+                <i class="fas fa-stop"></i> Stop
+              </button>
+            </div>
+            
+            <div class="recording-info">
+              <div class="recording-timer">
+                <i class="fas fa-clock"></i>
+                <span id="recording-time">00:00:00</span>
+              </div>
+              <div class="file-size">
+                <i class="fas fa-database"></i>
+                <span id="recording-size">0 MB</span>
+              </div>
+              <div class="audio-indicators">
+                <span id="mic-indicator" class="audio-indicator active">
+                  <i class="fas fa-microphone"></i>
+                </span>
+                <span id="system-indicator" class="audio-indicator">
+                  <i class="fas fa-volume-up"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="preview-container">
+            <div id="video-preview">
+              <p>Preview will appear here when recording starts</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="teacher-selection">
+          <h3>Select Teacher</h3>
+          <select id="teacher-select">
+            <option value="">-- Select Teacher --</option>
+            <option value="Sheik Mohammed Awel">Sheik Mohammed Awel - Quranic Studies & Others </option>
+            <option value="Ustaz Sadam Usman">Ustaz Sadam Usman - Arabic Language & Others</option>
+            <option value="Eng Khalid Ahmed">Eng Khalid Ahmed - Islamic civilization & Others</option>
+            <option value="Eng Ayub Ahmed">Eng Ayub Ahmed - Islamic Finance & Others</option>
+            <option value="Eng Rooba Aliye">Eng Rooba Aliye - English Language & Others</option>
+          </select>
+        </div>
+        
+        <div class="recording-actions">
+          <button id="save-recording" class="btn primary" disabled>
+            <i class="fas fa-save"></i> Save Recording
+          </button>
+          <button id="send-email" class="btn secondary" disabled>
+            <i class="fas fa-envelope"></i> Send to Email
+          </button>
+          <button id="send-whatsapp" class="btn whatsapp-btn" disabled>
+            <i class="fab fa-whatsapp"></i> Send via WhatsApp
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rest of your existing HTML content remains exactly the same -->
+  <!-- World Time Zone, Announcement Bar, Header, Public Content, etc. -->
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+    
+	 <!-- News & Events Section -->
+<section id="news-events" class="section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-newspaper"></i> News & Events</h2>
+    <p class="section-subtitle">Latest updates and activities from our college community</p>
+    
+    <div class="news-events-container">
+      <!-- News Feed -->
+      <div class="news-feed">
+        <h3><i class="fas fa-bullhorn"></i> Latest News</h3>
+        <div class="news-item">
+          <div class="news-date">
+            <span class="day">10</span>
+            <span class="month">Jun</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h4>Quran Donation for Orphans</h4>
+            <p>Barattoonni keenya Qur'aana firi 1,000 walitti qabuun Baadiyyaa Keessa daa'imman abbaa fi haadha hin qabne akkasuma harkaa Qaalleeyii tahan kan Qurana Bitaachuu hin dandeenyeef arjoomaniiru</p>
+            <div class="news-images">
+              <img src="quran - Copy.jpg" alt="Quran donation event">
+              <img src="qu.jpg" alt="Orphans receiving Qurans">
+              <img src="qur12.jpg" alt="Orphans receiving Qurans">
+               <img src="hud14.jpg" alt="Orphans receiving Qurans">
+            </div>
+            <div class="news-tags">
+              <span class="tag">Quran</span>
+              <span class="tag">Education</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="news-item">
+          <div class="news-date">
+            <span class="day">05</span>
+            <span class="month">May</span>
+            <span class="year">2025</span>
+          </div>
+          <div class="news-content">
+            <h4>Students Visit Dilcora Hospital</h4>
+            <p>Barattoonni HudHud Obbolleeyan keenya warreen Hospitaala Dilcoorraa keessa jiran nyaata arjoomudhan akkasuma Daawana bifaa bareedan  gaaggeeysani jiran .</p>
+            <div class="news-images">
+              <img src="hu12.jpg" alt="Food packaging">
+              <img src="hud9.jpg" alt="Distribution event">
+              <img src="hud11.jpg" alt="Distribution event">
+              <img src="hi.jpg" alt="Distribution event">
+            </div>
+            <div class="news-tags">
+              <span class="tag">Dilcora Hospital</span>
+              <span class="tag">Community Support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Events Sidebar -->
+      <div class="events-sidebar">
+        <h3><i class="fas fa-calendar-alt"></i> Upcoming Events</h3>
+        
+        <div class="event-card">
+          <div class="event-date">
+            <span class="event-day">10</span>
+            <span class="event-month">Oct</span>
+          </div>
+          <div class="event-info">
+            <h4>Ifa Islaamaa Babal'isuu</h4>
+            <p><i class="fas fa-clock"></i> 2:00 PM - 4:00 PM</p>
+            <p><i class="fas fa-map-marker-alt"></i> Yeroo tokkotti Qur'aana Tokko</p>
+            <p><i class="fas fa-map-marker-U"></i>🔴TELEGRAM LIVE STREAM🔴</p>
+            <p><i class="fas fa-map-marker-alt"></i> Carraan Kun isiin hin Dabriin </p>
+            <p> ✅ Sagantaan waalitti Guruu Qur'aana keenya qaawwa Obbolleeyyan keenya cufuuf kan kaayyeffate, jechoota Rabbii akka baratan, qara'an, fi akka hubatan gargaaruudha.</p>
+            <p> ✅ Nama tokkoo jecha Rabbii wajjin walitti dhufeenya umurii guutuu kennuu.</p>
+            <p> ✅ Madrasaa fi Masjiidota Baaddiiyyoota fi gandoota fagoo jiran Qurana Akka Argaatan Godhuu.</p>
+          </div>
+        </div>  
+        <div class="view-all-events">
+          <a href="#" class="btn secondary">View All </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Islamic History Education Series Section -->
+<section id="islamic-series" class="section series-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-film"></i> Islamic History Education Series</h2>
+    <p class="section-subtitle">Explore our comprehensive video series on Islamic history and heritage</p>
+    
+    <div class="about-series card">
+      <h3>About This Series</h3>
+      <p>Our Islamic History Education Series brings to life the rich heritage of Islamic civilization through professionally produced educational content. Each season covers different eras and aspects of Islamic history, from the life of Prophet Muhammad (ﷺ) to the golden age of Islamic civilization and beyond.</p>
+      <p>Produced by renowned Islamic scholars and historians, this series is perfect for students, educators, and anyone interested in learning about Islamic history in an engaging format.</p>
+    </div>
+    
+
+    <div class="video-player-container">
+      <div class="video-display">
+        <div class="video-wrapper">
+          <div id="main-video-player">
+            <div class="video-placeholder">
+              <i class="fas fa-play-circle"></i>
+              <p>Select a video to play</p>
+            </div>
+          </div>
+        </div>
+        <div class="video-info">
+          <h2 id="video-title">Welcome to Hudhud Islamic College</h2>
+          <p id="video-description">Select a video from the list to start watching</p>
+        </div>
+      </div>
+		
+		<div class="video-selector">
+        <h2> 🕋 Quran Live 🕋 </h2>
+			<div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="2iQ7W3SNrVE" data-title="Al-Quran Juz 29 || JUZ TABARAK" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/2iQ7W3SNrVE/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">Al-Quran Juz 29 || JUZ TABARAK </div>
+          </div>
+			
+        <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="56UmWU3xIHk" data-title="Friday Surah Al Kahf - سورة الكهف" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/56UmWU3xIHk/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">Friday Surah Al Kahf - سورة الكهف </div>
+          </div>
+
+      <div class="video-selector">
+        <h2>Daily New Videos</h2>
+		   <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="sz8O3expaCk" data-title="የየቲሙ ሰሀባ ጎረቤት ድንቅ ታሪክ 😢😢 || ልብ ያለው ልብ ይበል]" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/sz8O3expaCk/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የየቲሙ ሰሀባ ጎረቤት ድንቅ ታሪክ 😢😢 || ልብ ያለው ልብ ይበል </div>
+          </div>
+		  
+		  
+		  <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="E7Ey4yhg1kk" data-title="የውስጥ ሰላም ለፈለገ || ልብ ያለው ልብ ይበል]" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/E7Ey4yhg1kk/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የውስጥ ሰላም ለፈለገ || ልብ ያለው ልብ ይበል </div>
+          </div>
+			  
+			  
+		  
+		   <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="ELHqn8Eqm6s" data-title="የወጣቱ አስገራሚ ገጠመኝ || ልብ ያለው ልብ ይበል]" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/ELHqn8Eqm6s/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የወጣቱ አስገራሚ ገጠመኝ|| ልብ ያለው ልብ ይበል </div>
+          </div>
+			   
+			   <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="znkHdMvN5Mg" data-title=" በታማኝነትህ ጽና || ልብ ያለው ልብ ይበል]" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/znkHdMvN5Mg/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">በታማኝነትህ ጽና || ልብ ያለው ልብ ይበል </div>
+          </div>
+		   
+        <div class="video-list" id="video-list">
+          <div class="video-item active" data-video-id="p_HGQ9di4kM" data-title="የዝሆኑ ሰዎች ||የሀበሻው ንጉስ አብረሀ || ልብ ያለው ልብ ይበል]" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/p_HGQ9di4kM/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የዝሆኑ ሰዎች ||የሀበሻው ንጉስ አብረሀ || ልብ ያለው ልብ ይበል </div>
+          </div>
+          
+          <div class="video-item" data-video-id="Lv9xAwwH5fw" data-title=" የሰሙድ ህዝቦች || የጠፉበት ድንቅ ታሪክ || ልብ ያለው ልብ ይበል" data-desc=" Islamic History Education Series || HUDHUD ISLAMIC COLLEGE.">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/Lv9xAwwH5fw/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የሰሙድ ህዝቦች || የጠፉበት ድንቅ ታሪክ || ልብ ያለው ልብ ይበል</div>
+          </div>
+          
+          <div class="video-item" data-video-id="-hzvlrUbrR8" data-title="ፈተና የበዛባት ሴት || ልብ ያለው ልብ ይበል" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE.">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/-hzvlrUbrR8/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">ፈተና የበዛባት ሴት || ልብ ያለው ልብ ይበል </div>
+          </div>
+          
+          <div class="video-item" data-video-id="TYr6EjTbPU0" data-title="የአላህን ውዴታ ለማግኘት || ልብ ያለው ልብ ይበል" data-desc="Islamic History Education Series || HUDHUD ISLAMIC COLLEGE.">
+            <div class="video-thumb">
+              <img src="https://img.youtube.com/vi/TYr6EjTbPU0/mqdefault.jpg" alt="Video Thumbnail">
+              <div class="play-icon"><i class="fas fa-play"></i></div>
+            </div>
+            <div class="video-title">የአላህን ውዴታ ለማግኘት || ልብ ያለው ልብ ይበል </div>
+        </div>
+        </div>
+        <div class="controls">
+          <button class="btn btn-secondary" id="prev-btn">Previous</button>
+          <button class="btn btn-primary" id="next-btn">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+     <!-- Payment Modal -->
+  <div id="paymentModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Options</h2>
+        <button class="modal-close" onclick="closeModal('paymentModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="payment-options">
+          <div class="payment-option" onclick="selectPayment('cbe')">
+            <div class="payment-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Commercial Bank of Ethiopia</h3>
+            <p>Pay via CBE account using QR code</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('ebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>E-Birr</h3>
+            <p>Pay via E-Birr mobile payment</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('telebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-sim-card"></i>
+            </div>
+            <h3>TeleBirr</h3>
+            <p>Pay via TeleBirr mobile payment</p>
+          </div>
+        </div>
+        
+        <div id="cbe-payment" class="payment-details" style="display: none;">
+          <h3>Commercial Bank of Ethiopia Payment</h3>
+          <div class="qr-code">
+            <img src="qr code.jpg" alt="CBE QR Code">
+          </div>
+          <p>Scan the QR code using your CBE mobile app to complete payment</p>
+          <div class="account-details">
+            <p><strong>Account Name:</strong> HUDHUD SCHOOL</p>
+            <p><strong>Account Number:</strong> 1000606221995</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('cbe')">I've Completed Payment</button>
+        </div>
+        
+        <div id="ebirr-payment" class="payment-details" style="display: none;">
+          <h3>E-Birr Payment</h3>
+          <div class="payment-instructions">
+            <div class="qr-code">
+            <img src="EBIRR.jpg" alt="E-Birr QR Code">
+            </div>
+            <p>To pay via E-Birr:</p>
+            <ol>
+              <li>Open E-Birr App</li>
+              <li>Select "Send Money"</li>
+              <li>Enter phone number: <strong>251933322685</strong></li>
+              <li>Enter amount: <span id="ebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>E-Birr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('ebirr')">I've Completed Payment</button>
+        </div>
+        
+        <div id="telebirr-payment" class="payment-details" style="display: none;">
+          <h3>TeleBirr Payment</h3>
+          <div class="payment-instructions">
+             <div class="qr-code">
+            <img src="TEL BIRR.jpg" alt="telebirr QR Code">
+            </div>
+            <p>To pay via TeleBirr:</p>
+            <ol>
+              <li>Open TeleBirr App</li>
+              <li>Select "Send Money"</li>
+              <li>Enter phone number: <strong>251933322685</strong></li>
+              <li>Enter amount: <span id="telebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>TeleBirr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('telebirr')">I've Completed Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Success Modal -->
+  <div id="paymentSuccessModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Successful</h2>
+        <button class="modal-close" onclick="closeModal('paymentSuccessModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="success-animation">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Your Payment!</h3>
+        <p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
+        <div class="invoice-details">
+          <p><strong>Transaction ID:</strong> <span id="transaction-id"></span></p>
+          <p><strong>Amount Paid:</strong> <span id="amount-paid"></span></p>
+          <p><strong>Date:</strong> <span id="payment-date"></span></p>
+        </div>
+        <button class="btn primary" onclick="downloadInvoice()">Download Invoice</button>
+        <button class="btn secondary" onclick="closeModal('paymentSuccessModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Rest of the HTML content remains the same until the Apply section -->
+  
+  <!-- Apply Section -->
+  <section id="apply" class="section apply-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fa-solid fa-file-signature"></i> Apply Now</h2>
+      <p class="section-subtitle">Begin your journey with Hudhud Islamic College</p>
+      
+      <div class="apply-content">
+        <div class="apply-info">
+          <h3>Admission Process</h3>
+          <div class="process-steps">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h4>Complete Application</h4>
+                <p>Fill out the application form with your details</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h4>Submit Documents</h4>
+                <p>Upload required documents for verification</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h4>Application Review</h4>
+                <p>Our team will review your application</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h4>Make Payment</h4>
+                <p>Pay application fee through our secure payment system</p>
+              </div>
+            </div>
+            <div class="step">
+              <div class="step-number">5</div>
+              <div class="step-content">
+                <h4>Admission Decision</h4>
+                <p>Receive notification of acceptance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="apply-form">
+          <form id="applicationForm" class="form card">
+            <h3>Application Form</h3>
+            <div class="grid two">
+              <div class="form-group">
+                <label for="firstName">First Name</label>
+                <input id="firstName" name="firstName" required placeholder="Your first name" />
+              </div>
+              <div class="form-group">
+                <label for="lastName">Last Name</label>
+                <input id="lastName" name="lastName" required placeholder="Your last name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input id="email" name="email" type="email" required placeholder="Your email address" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input id="phone" name="phone" required placeholder="Your phone number" />
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="program">Program of Interest</label>
+              <select id="program" name="program" required onchange="updateApplicationFee()">
+                <option value="" disabled selected>Select a program</option>
+                <optgroup label="Certificate Programs">
+                  <option value="Computer Skills" data-fee="500">Computer Skills (ETB 500)</option>
+                  <option value="Arabic Language" data-fee="500">Arabic Language (ETB 500)</option>
+                  <option value="English Language" data-fee="500">English Language (ETB 500)</option>
+                  <option value="Graphic Design" data-fee="500">Graphic Design (ETB 500)</option>
+                  <option value="Software Development" data-fee="500">Software Development (ETB 500)</option>
+                  <option value="Digital Skills" data-fee="500">Digital Skills (ETB 500)</option>
+                  <option value="Website Development" data-fee="500">Website Development (ETB 500)</option>
+                </optgroup>
+                <optgroup label="Diploma Programs">
+                  <option value="Higher Diploma in Islamic Studies" data-fee="1000">Higher Diploma in Islamic Studies </option>
+                  <option value="Quran Studies" data-fee="1000">Quran Studies </option>
+                  <option value="Qaaidatu Nuuraaniyya" data-fee="1000">Qaaidatu Nuuraaniyya </option>
+                  <option value="Huruufa Makhaarija" data-fee="1000">Huruufa Makhaarija </option>
+                  <option value="Qur'an Tilaawaa" data-fee="1000">Qur'an Tilaawaa </option>
+                  <option value="leadership Skills" data-fee="1000">leadership Skills </option>
+                  <option value="Islamic Finance" data-fee="1000">Islamic Financing and Management </option>
+                </optgroup>
+                <optgroup label="Degree Programs">
+                  <option value="BA Islamic Studies" data-fee="1500">Bachelor of Arts in Islamic Studies </option>
+                  <option value="BQuran Memorization" data-fee="1500">Bachelor of Quran Memorization </option>
+                  <option value="BIslamic Banking" data-fee="1500">Bachelor of Islamic banking and finance </option>
+                  <option value="BSc Islamic Economics" data-fee="1500">Bachelor of Science in Islamic Economics Management </option>
+                </optgroup>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label>Application Fee: <span id="application-fee">ETB 0</span></label>
+            </div>
+            
+            <div class="form-group">
+              <label for="statement">Personal Statement (Optional)</label>
+              <textarea id="statement" name="statement" rows="4" placeholder="Tell us about your educational goals and interests..."></textarea>
+            </div>
+            
+            <div class="form-group">
+              <label>Upload Documents (PDF, JPG, PNG - Max 20MB each)</label>
+              <div class="file-upload">
+                <input type="file" id="doc-files" multiple accept=".pdf,.png,.jpg,.jpeg" />
+                <label for="doc-files" class="file-label">
+                  <i class="fas fa-cloud-upload-alt"></i>
+                  <span>Choose files to upload</span>
+                </label>
+                <div id="file-list"></div>
+              </div>
+            </div>
+            
+            <div class="form-actions">
+              <button type="button" class="btn primary" onclick="processPayment()">Pay Application Fee</button>
+              <button type="submit" class="btn secondary">Submit Application</button>
+              <a class="btn whatsapp-btn" href="https://wa.me/251933322685?text=Hello!%20I%20would%20like%20to%20apply%20to%20Hudhud%20Islamic%20College." target="_blank">
+                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+              </a>
+            </div>
+            
+            <p class="form-note">By submitting this form, you agree to our terms and conditions. Your information will be kept confidential.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rest of the HTML content remains the same -->
+  
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
+    <!-- Donate Section -->
+    <section id="donate" class="section donate-section">
+      <div class="container">
+        <h2 class="section-title"><i class="fa-solid fa-hand-holding-heart"></i> Support Our Mission</h2>
+        <p class="section-subtitle">Why Donate? Abu Huraira (RadhiAllahu 'anhu) reported: Allah's messenger ﷺ saying: When a man dies, his acts come to an end, but three, recurring charity or knowledge (by which people) benefit, or a pious son, who prays for him (for the deceased) [Sahih Muslim – Book 13-Hadith 4005] Allah SWT says: "...and spending something (in charity) out of the provision which we have bestowed you, before death should come to any of you and he should say, O my Rabb! Why you do not give me respite for a little while? I should then have given (largely) in charity, and I should have been one of the doers of good." (Qur'an, 63:10)</p>
+        
+        <div class="donate-options">
+          <div class="donate-card">
+            <div class="donate-icon">
+              <i class="fas fa-donate"></i>
+            </div>
+            <h3>Sadaqah-Increased</h3>
+            <p>"Those who (in charity) spend of their goods by night and by day, in secret and in public, have their reward with their Lord." (Qur'an, 2:274),</p>
+            <p class="donate-amount">Starting from ETB 100 Birr</p>
+            <a href="https://wa.me/251933322685?text=Hello!%20I%20would%20like%20to%20donate%20Sadaqah%20to%20Hudhud%20Islamic%20College." class="btn primary">Donate Sadaqah</a>
+          </div>
+          
+          <div class="donate-card">
+            <div class="donate-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Zakat</h3>
+            <p> he or she must pay 2.5% of that wealth as zakat.
+
+"...and those in whose wealth there is a recognised right, for the needy and deprived" (Qur'an 70:24-5)</p>
+            <p class="donate-amount">Starting from ETB 100 Birr</p>
+            <a href="https://wa.me/251933322685?text=Hello!%20I%20would%20like%20to%20donate%20Zakat%20to%20Hudhud%20Islamic%20College." class="btn primary">Donate Zakat</a>
+          </div>
+          
+          <div class="donate-card">
+            <div class="donate-icon">
+              <i class="fas fa-quran"></i>
+            </div>
+            <h3>Quran Donation</h3>
+            <p>Sadaqatul Jariyah is ongoing charity (continuous rewards) received by us (for good actions and deeds), that will not only benefit us in this life, but will continue to benefit us after our death Inshallah.</p>
+            <p class="donate-amount">Starting from ETB 100 Birr</p>
+            <a href="https://wa.me/251933322685?text=Hello!%20I%20would%20like%20to%20donate%20Quran%20to%20Hudhud%20Islamic%20College." class="btn primary">Donate Quran</a>
+          </div>
+        </div>
+        
+        <div class="bank-details card">
+          <h3><i class="fas fa-university"></i> Bank Transfer Details</h3>
+          <p>You can directly transfer funds to our bank account:</p>
+          <div class="bank-info">
+            <div class="bank-item">
+              <span class="bank-label">Bank Name:</span>
+              <span class="bank-value">Commercial Bank of Ethiopia</span>
+            </div>
+            <div class="bank-item">
+              <span class="bank-label">Account Name:</span>
+              <span class="bank-value">HUDHUD SCHOOL</span>
+            </div>
+            <div class="bank-item">
+              <span class="bank-label">Account Number:</span>
+              <span class="bank-value">1000606221995</span>
+            </div>
+          </div>
+          <p class="bank-note">After making a transfer, please contact us via WhatsApp with your details for confirmation.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Testimonials Section -->
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-comment"></i> What Our Students Say</h2>
+    <p class="section-subtitle"></p>
+    
+    <div class="testimonials-container">
+      <div class="testimonial-slider">
+        <div class="testimonial-slides">
+          <div class="testimonial-slide active">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"ALHAMDULIILLAH! My heart filled up with thanks fulness to the HHIC team and The teachers are knowledgeable and caring, and the online classes are so convenient. I've grown both spiritually & academically."</p>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="ayuuu.jpg" alt="Ayan Dawid">
+                  </div>
+                  <div class="author-details">
+                    <h4>Ayan Dawid</h4>
+                    <p>Bachelor of Islamic Studies</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"The Quran memorization program is exceptional. The teachers are patient and use effective techniques. I've memorized more in one year than I did in previous years studying elsewhere."</p>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="hikma.jpg" alt="Hikma Suker">
+                  </div>
+                  <div class="author-details">
+                    <h4>Hikma Suker</h4>
+                    <p>Bachelor of Quran Memorization</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"As a working professional, the flexible schedule allows me to pursue my Islamic studies without compromising my job. The live classes are interactive and the teachers are always available for questions."</p>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="me hudhud.jpg" alt="Talha Fahmi">
+                  </div>
+                  <div class="author-details">
+                    <h4>Talha Fahmi</h4>
+                    <p>Bachelor of information Technology</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"As a student, I have learn many new skill in my profession as an SIEM person and also improved my religious knowledge and practice. Thanks HHIC."</p>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="HASAN.jpg" alt="Hasenat Rashad">
+                  </div>
+                  <div class="author-details">
+                    <h4>Hasenat Rashad</h4>
+                    <p>Bachelor of Science in Islamic Economics Management</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="testimonial-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="quote-icon">
+                  <i class="fas fa-quote-left"></i>
+                </div>
+                <p class="testimonial-text">"I would like to take this opportunity to thank Dr. Fahmi Ahmed for such a platform. 
+            May Allah bless each and every person contributing to this College. May Allah bless all the students with knowlegde and lead us to straight path."</p>
+                <div class="testimonial-author">
+                  <div class="author-image">
+                    <img src="naj.jpg" alt="Najwa Abdalla">
+                  </div>
+                  <div class="author-details">
+                    <h4>Najwa Abdalla</h4>
+                    <p>Bachelor of Islamic Financing</p>
+                    <div class="rating">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="testimonial-controls">
+          <button class="testimonial-prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="testimonial-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+            <span class="dot" data-index="3"></span>
+            <span class="dot" data-index="4"></span>
+          </div>
+          <button class="testimonial-next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Private Content (Visible only to logged-in students) -->
+  <div id="private-content" style="display: none;">
+    <!-- Student Portal Section -->
+  <section id="student-portal" class="section portal-section">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Student Portal</h2>
+      <p class="section-subtitle">Welcome back, <span id="student-name">Student</span>! Connect with fellow students and access your learning resources</p>
+      
+      <div class="portal-tabs">
+        <button class="portal-tab active" data-tab="dashboard">Dashboard</button>
+        <button class="portal-tab" data-tab="attendance">Attendance</button>
+        <button class="portal-tab" data-tab="classes">Live Classes</button>
+        <button class="portal-tab" data-tab="exams">Exams</button>
+      </div>
+      
+      <div class="portal-content active" id="dashboard-content">
+        <!-- Dashboard content remains the same -->
+      </div>
+              <div class="portal-content active" id="dashboard-content">
+          <div class="dashboard-grid">
+            <div class="dashboard-card">
+              <div class="dashboard-icon">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h3>My Courses</h3>
+              <p>Access all your enrolled courses and materials</p>
+              <div class="course-list">
+                <div class="course-item">
+                  <h4>Islamic Studies 101</h4>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 65%"></div>
+                  </div>
+                  <span>65% Complete</span>
+                </div>
+                <div class="course-item">
+                  <h4>Arabic Language</h4>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 40%"></div>
+                  </div>
+                  <span>40% Complete</span>
+                </div>
+                <div class="course-item">
+                  <h4>Quran Memorization</h4>
+                  <div class="progress-bar">
+                    <div class="progress" style="width: 80%"></div>
+                  </div>
+                  <span>80% Complete</span>
+                </div>
+              </div>
+              <button class="btn primary">View All Courses</button>
+            </div>
+            
+            <div class="dashboard-card">
+              <div class="dashboard-icon">
+                <i class="fas fa-calendar-alt"></i>
+              </div>
+              <h3>Upcoming Events</h3>
+              <div class="events-list">
+                <div class="event-item">
+                  <div class="event-date">
+                    <span class="day">15</span>
+                    <span class="month">Feb</span>
+                  </div>
+                  <div class="event-details">
+                    <h4>Midterm Examinations</h4>
+                    <p>All courses</p>
+                  </div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">
+                    <span class="day">20</span>
+                    <span class="month">Feb</span>
+                  </div>
+                  <div class="event-details">
+                    <h4>Guest Lecture</h4>
+                    <p>Islamic Finance Principles</p>
+                  </div>
+                </div>
+                <div class="event-item">
+                  <div class="event-date">
+                    <span class="day">25</span>
+                    <span class="month">Feb</span>
+                  </div>
+                  <div class="event-details">
+                    <h4>Quran Competition</h4>
+                    <p>Annual Inter-College Event</p>
+                  </div>
+                </div>
+              </div>
+              <button class="btn secondary">View Full Calendar</button>
+            </div>
+            
+            <div class="dashboard-card">
+              <div class="dashboard-icon">
+                <i class="fas fa-chart-line"></i>
+              </div>
+              <h3>Performance</h3>
+              <div class="performance-stats">
+                <div class="stat">
+                  <span class="value">87%</span>
+                  <span class="label">Average Grade</span>
+                </div>
+                <div class="stat">
+                  <span class="value">95%</span>
+                  <span class="label">Attendance</span>
+                </div>
+                <div class="stat">
+                  <span class="value">12</span>
+                  <span class="label">Assignments</span>
+                </div>
+              </div>
+              <div class="performance-chart">
+                <canvas id="gradesChart"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+  <!-- Class Attendance Section -->
+<section id="attendance-system" class="section">
+  <div class="container">
+    <h2 class="section-title"><i class="fas fa-user-check"></i>Class Attendance</h2>
+    <p class="section-subtitle">Record and manage class attendance </p>
+    
+    <div class="attendance-container card">
+      <div class="attendance-header">
+        <h3>Class Attendance Record</h3>
+        <div class="attendance-controls">
+          <div class="form-group">
+            <label for="class-select">Select Class:</label>
+            <select id="class-select">
+              <option value="Quranic">Quranic</option>
+              <option value="arabic-301">Arabic 301</option>
+              <option value="quran">Quran Tafsir </option>
+              <option value="principles of marriage & islamic finance">Principles Of Marriage & Islamic Finance</option>
+              <option value="final-exam">Final Exam</option>
+              <option value="islamic-theology">Islamic Theology</option>
+              <option value="riyadul-saliheen">Riyadul Saliheen</option>
+              <option value="prophetic-description sham'ail">Prophetic Description | Sham'ail</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="teacher-name">Teacher Name:</label>
+            <input type="text" id="teacher-name" placeholder="Enter teacher's name">
+          </div>
+          <div class="form-group">
+            <label for="attendance-date">Date:</label>
+            <input type="date" id="attendance-date" value="<?php echo date('Y-m-d'); ?>">
+          </div>
+          <div class="form-group">
+            <label for="class-time">Class Time:</label>
+            <input type="time" id="class-time" value="09:00">
+          </div>
+          <button id="mark-all-present" class="btn secondary">Mark All Present</button>
+          <button id="mark-all-absent" class="btn secondary">Mark All Absent</button>
+        </div>
+      </div>
+      
+      <div class="attendance-table-container">
+        <table class="attendance-table">
+          <thead>
+            <tr>
+              <th>Student ID</th>
+              <th>Student Name</th>
+              <th>Status</th>
+              <th>Time</th>
+              <th>Feedback</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="attendance-list">
+            <!-- Students will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      
+      <div class="class-summary">
+        <h4>Class Summary</h4>
+        <div class="summary-stats">
+          <div class="stat">
+            <span class="value" id="total-students">0</span>
+            <span class="label">Total Students</span>
+          </div>
+          <div class="stat">
+            <span class="value" id="present-count">0</span>
+            <span class="label">Present</span>
+          </div>
+          <div class="stat">
+            <span class="value" id="absent-count">0</span>
+            <span class="label">Absent</span>
+          </div>
+          <div class="stat">
+            <span class="value" id="attendance-percentage">0%</span>
+            <span class="label">Attendance Rate</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="attendance-actions">
+        <button id="save-attendance" class="btn primary">Save Attendance</button>
+        <button id="send-attendance" class="btn whatsapp-btn">
+          <i class="fab fa-whatsapp"></i> Send via WhatsApp
+        </button>
+        <button id="export-attendance" class="btn secondary">Export to CSV</button>
+        <button id="print-attendance" class="btn secondary">
+          <i class="fas fa-print"></i> Print Report
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+      
+      <div class="portal-content" id="classes-content">
+        <div class="live-classes-portal">
+          <h3><i class="fas fa-video"></i> Join Live Classes</h3>
+          <p>Select a class below to join the live session</p>
+          
+          <div class="class-sessions">
+            <div class="class-session">
+              <div class="session-info">
+                <h4>Quranic Studies & Others</h4>
+                <p><i class="fas fa-clock"></i> 3:00 AM - 5:00 AM (Mon,Tues,Wed,Thurs)</p>
+                <p><i class="fas fa-user"></i> Sheikh: Sheikh Mohammed Awal</p>
+                <p><i class="fas fa-users"></i> Students Online</p>
+              </div>
+              <div class="session-actions">
+                <a href="http://meet.google.com/wwk-vdxy-rys" class="btn primary" target="_blank">
+                  <i class="fab fa-google"></i> Join via Google Meet
+                </a>
+                <a href="https://us05web.zoom.us/j/6804690808?pwd=R4aiCyq1J5sDP0ryJSs3dWwz2ES3ma.1" class="btn secondary" target="_blank">
+                  <i class="fas fa-video"></i> Join via Zoom
+                </a>
+              </div>
+            </div>
+            
+            <div class="class-session">
+              <div class="session-info">
+                <h4> Enlish Language  </h4>
+                <p><i class="fas fa-clock"></i> 2:00 AM - 3:10 PM (Mon, Wed, Fri,Sat)</p>
+                <p><i class="fas fa-user"></i> Teacher: Eng.Robson Aliye </p>
+                <p><i class="fas fa-users"></i> Students Online</p>
+              </div>
+              <div class="session-actions">
+                <a href="meet.google.com/ups-daju-xeh" class="btn primary" target="_blank">
+                  <i class="fab fa-google"></i> Join via Google Meet
+                </a>
+                <a href="https://us05web.zoom.us/j/6804690808?pwd=R4aiCyq1J5sDP0ryJSs3dWwz2ES3ma.1" class="btn secondary" target="_blank">
+                  <i class="fas fa-video"></i> Join via Zoom
+                </a>
+              </div>
+            </div>
+
+            <div class="class-session">
+              <div class="session-info">
+                <h4>Principles Of Marriage & Islamic Finance</h4>
+                <p><i class="fas fa-clock"></i> 2:00 AM - 3:30 AM (Sat,Sund)</p>
+                <p><i class="fas fa-user"></i> Teacher: Eng.Ayub Ahmed </p>
+                <p><i class="fas fa-users"></i> Students Online</p>
+              </div>
+              <div class="session-actions">
+                <a href="meet.google.com/ups-daju-xeh" class="btn primary" target="_blank">
+                  <i class="fab fa-google"></i> Join via Google Meet
+                </a>
+                <a href="https://us05web.zoom.us/j/6804690808?pwd=R4aiCyq1J5sDP0ryJSs3dWwz2ES3ma.1" class="btn secondary" target="_blank">
+                  <i class="fas fa-video"></i> Join via Zoom
+                </a>
+              </div>
+            </div>
+
+            <div class="class-session">
+              <div class="session-info">
+                <h4> Islamic-Theology  </h4>
+                <p><i class="fas fa-clock"></i> 3:00 AM - 4:10 PM (Fri,Sat)</p>
+                <p><i class="fas fa-user"></i> Teacher: Eng.Khalid Ahmedin </p>
+                <p><i class="fas fa-users"></i> Students Online</p>
+              </div>
+              <div class="session-actions">
+                <a href="meet.google.com/ups-daju-xeh" class="btn primary" target="_blank">
+                  <i class="fab fa-google"></i> Join via Google Meet
+                </a>
+                <a href="https://us05web.zoom.us/j/6804690808?pwd=R4aiCyq1J5sDP0ryJSs3dWwz2ES3ma.1" class="btn secondary" target="_blank">
+                  <i class="fas fa-video"></i> Join via Zoom
+                </a>
+              </div>
+            </div>
+            
+            <div class="class-session">
+              <div class="session-info">
+                <h4>Riyadul Saliheen</h4>
+                <p><i class="fas fa-clock"></i> 3:00 PM - 4:10 PM (Sunday)</p>
+                <p><i class="fas fa-user"></i> Ustaz: Ustaz Sadam Usman</p>
+                <p><i class="fas fa-users"></i> Students Online</p>
+              </div>
+              <div class="session-actions">
+                <a href="http://meet.google.com/aoo-eeim-zor" class="btn primary" target="_blank">
+                  <i class="fab fa-google"></i> Join via Google Meet
+                </a>
+                <a href="https://us05web.zoom.us/j/6804690808?pwd=R4aiCyq1J5sDP0ryJSs3dWwz2ES3ma.1" class="btn secondary" target="_blank">
+                  <i class="fas fa-video"></i> Join via Zoom
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="class-recordings">
+            <h4><i class="fas fa-play-circle"></i> Recorded Sessions</h4>
+            <div class="recordings-list">
+              <div class="recording-item">
+                <div class="recording-thumbnail">
+                  <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="recording-details">
+                  <h5>Quranic Studies - Sep 15, 2025</h5>
+                  <p>Duration: 1h 25m</p>
+                </div>
+                <button class="btn small"><i class="fas fa-download"></i> Download</button>
+              </div>
+              <div class="recording-item">
+                <div class="recording-thumbnail">
+                  <i class="fas fa-play-circle"></i>
+                </div>
+                <div class="recording-details">
+                  <h5>Islamic Finance - Sep 14, 2025</h5>
+                  <p>Duration: 1h 30m</p>
+                </div>
+                <button class="btn small"><i class="fas fa-download"></i> Download</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="portal-content" id="exams-content">
+        <div class="exams-container">
+          <h3><i class="fas fa-file-alt"></i> Online Examinations</h3>
+          
+          <div class="exam-tabs">
+            <button class="exam-tab active" data-exam="upcoming">Upcoming Exams</button>
+            <button class="exam-tab" data-exam="ongoing">Ongoing Exams</button>
+            <button class="exam-tab" data-exam="completed">Completed Exams</button>
+          </div>
+          
+          <div class="exam-content active" id="upcoming-exams">
+            <div class="exam-card">
+              <div class="exam-header">
+                <h4>Islamic Studies Midterm Exam</h4>
+                <span class="exam-status upcoming">Upcoming</span>
+              </div>
+              <div class="exam-details">
+                <p><i class="fas fa-calendar"></i> Date: September 20, 2025</p>
+                <p><i class="fas fa-clock"></i> Time: 10:00 AM - 11:30 AM</p>
+                <p><i class="fas fa-hourglass-half"></i> Duration: 90 minutes</p>
+                <p><i class="fas fa-question-circle"></i> Format: Multiple Choice & Essay</p>
+              </div>
+              <div class="exam-actions">
+                <button class="btn primary" onclick="joinExam('Islamic Studies Midterm')">Join Exam</button>
+                <button class="btn secondary" onclick="viewExamInstructions('Islamic Studies Midterm')">View Instructions</button>
+              </div>
+            </div>
+            
+            <div class="exam-card">
+              <div class="exam-header">
+                <h4>Arabic Language Quiz</h4>
+                <span class="exam-status upcoming">Upcoming</span>
+              </div>
+              <div class="exam-details">
+                <p><i class="fas fa-calendar"></i> Date: September 22, 2025</p>
+                <p><i class="fas fa-clock"></i> Time: 2:00 PM - 2:45 PM</p>
+                <p><i class="fas fa-hourglass-half"></i> Duration: 45 minutes</p>
+                <p><i class="fas fa-question-circle"></i> Format: Multiple Choice</p>
+              </div>
+              <div class="exam-actions">
+                <button class="btn primary" onclick="joinExam('Arabic Language Quiz')">Join Exam</button>
+                <button class="btn secondary" onclick="viewExamInstructions('Arabic Language Quiz')">View Instructions</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="exam-content" id="ongoing-exams">
+            <div class="exam-card">
+              <div class="exam-header">
+                <h4>Quran Memorization Test</h4>
+                <span class="exam-status ongoing">Ongoing</span>
+              </div>
+              <div class="exam-details">
+                <p><i class="fas fa-calendar"></i> Date: September 15, 2025</p>
+                <p><i class="fas fa-clock"></i> Time: 9:00 AM - 10:00 AM</p>
+                <p><i class="fas fa-hourglass-half"></i> Time Remaining: 25 minutes</p>
+                <p><i class="fas fa-question-circle"></i> Format: Oral Recitation</p>
+              </div>
+              <div class="exam-actions">
+                <button class="btn primary" onclick="joinExam('Quran Memorization Test')">Continue Exam</button>
+                <button class="btn secondary" onclick="viewExamInstructions('Quran Memorization Test')">View Instructions</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="exam-content" id="completed-exams">
+            <div class="exam-card">
+              <div class="exam-header">
+                <h4>Islamic History Final Exam</h4>
+                <span class="exam-status completed">Completed</span>
+              </div>
+              <div class="exam-details">
+                <p><i class="fas fa-calendar"></i> Date: September 5, 2025</p>
+                <p><i class="fas fa-check-circle"></i> Status: Graded</p>
+                <p><i class="fas fa-star"></i> Score: 87/100</p>
+                <p><i class="fas fa-chart-bar"></i> Class Average: 78/100</p>
+              </div>
+              <div class="exam-actions">
+                <button class="btn secondary" onclick="viewExamResults('Islamic History Final Exam')">View Results</button>
+                <button class="btn secondary" onclick="downloadCertificate('Islamic History')">Download Certificate</button>
+              </div>
+            </div>
+          </div>
+			<!-- Add this to the student portal section in index.html -->
+<div class="portal-content" id="exams-content">
+  <!-- ... existing exam content ... -->
+  
+  <!-- Final Exam Card -->
+  <div class="exam-card">
+    <div class="exam-header">
+      <h4>Final Examination - أساسيات في التربية الإسلامية</h4>
+      <span class="exam-status upcoming">Ready</span>
+    </div>
+    <div class="exam-details">
+      <p><i class="fas fa-file-pdf"></i> Format: PDF Document</p>
+      <p><i class="fas fa-hourglass-half"></i> Duration: 60 minutes</p>
+      <p><i class="fab fa-whatsapp"></i> Submit to: +251933322685</p>
+    </div>
+    <div class="exam-actions">
+      <button class="btn primary" onclick="startFinalExam()">Start Final Exam</button>
+    </div>
+  </div>
+</div>
+
+<!-- Exam Modal -->
+<div id="examModal" class="modal" style="display: none;">
+  <div class="modal-content exam-modal">
+    <div class="modal-header">
+      <h2>Final Exam - أساسيات في التربية الإسلامية</h2>
+      <div class="exam-timer">
+        <i class="fas fa-clock"></i>
+        <span id="exam-time">60:00</span>
+      </div>
+      <button class="modal-close" onclick="closeExam()">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="exam-container">
+        <div class="pdf-viewer">
+          <iframe id="exam-pdf" src="" width="100%" height="500px"></iframe>
+        </div>
+        <div class="answer-section">
+          <h3>Your Answers</h3>
+          <form id="exam-form">
+            <div class="form-group">
+              <label for="student-name">Full Name *</label>
+              <input type="text" id="student-name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+              <label for="student-id">Student ID *</label>
+              <input type="text" id="student-id" required placeholder="Enter your student ID">
+            </div>
+            <div class="form-group">
+              <label for="student-phone">Phone Number (for confirmation)</label>
+              <input type="tel" id="student-phone" placeholder="Enter your phone number">
+            </div>
+            
+            <!-- Multiple Choice Answers -->
+            <div class="form-group">
+              <label>Section A: Multiple Choice Answers *</label>
+              <div class="mcq-answers">
+                <div class="mcq-item">
+                  <span>1. </span>
+                  <select name="q1" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="العقيدة">العقيدة</option>
+                    <option value="العبادة">العبادة</option>
+                    <option value="العلم">العلم</option>
+                    <option value="الإيمان">الإيمان</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>2. </span>
+                  <select name="q2" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="الأصول الثلاثة">الأصول الثلاثة</option>
+                    <option value="التوحيد الثلاثة">التوحيد الثلاثة</option>
+                    <option value="الإيمان الخالص">الإيمان الخالص</option>
+                    <option value="الإحسان">الإحسان</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>3. </span>
+                  <select name="q3" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="الإستسلام لله بالتوحيد">الإستسلام لله بالتوحيد</option>
+                    <option value="الإنقياد له بالطاعة">الإنقياد له بالطاعة</option>
+                    <option value="البراءة من الشرك وأهله">البراءة من الشرك وأهله</option>
+                    <option value="الكل جواب">الكل جواب</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>4. </span>
+                  <select name="q4" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="توحيد الألوهية">توحيد الألوهية</option>
+                    <option value="توحيد الأسماء والصفات">توحيد الأسماء والصفات</option>
+                    <option value="توحيد العبادة">توحيد العبادة</option>
+                    <option value="توحيد الربوبية ">توحيد الربوبية </option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>5. </span>
+                  <select name="q5" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="النفاق">النفاق</option>
+                    <option value="الشرك الأكبر">الشرك الأكبر</option>
+                    <option value="الكفر">الكفر</option>
+                    <option value="الكذب">الكذب</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>6. </span>
+                  <select name="q6" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="حق الجار">حق الجار</option>
+                    <option value="حق الوالدين">حق الوالدين</option>
+                    <option value="حق الزوج">حق الزوج</option>
+                    <option value="حق الأولاد">حق الأولاد</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>7. </span>
+                  <select name="q7" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="أولياء الشيطان">أولياء الشيطان</option>
+                    <option value="أولياء السلطان">أولياء السلطان</option>
+                    <option value="أولياء الرحمن">أولياء الرحمن</option>
+                    <option value="أولياء الدينار">أولياء الدينار</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>8. </span>
+                  <select name="q8" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="الطوفان">الطوفان</option>
+                    <option value="الطاعون">الطاعون</option>
+                    <option value="الطاووس">الطاووس</option>
+                    <option value="الطاغوت">الطاغوت</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>9. </span>
+                  <select name="q9" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="الشيطان">الشيطان</option>
+                    <option value="الشعبان">الشعبان</option>
+                    <option value="الشيبان">الشيبان</option>
+                    <option value="الشيراز">الشيراز</option>
+                  </select>
+                </div>
+                <div class="mcq-item">
+                  <span>10. </span>
+                  <select name="q10" class="mcq-select" required>
+                    <option value="">Select answer</option>
+                    <option value="التيجانية">التيجانية</option>
+                    <option value="الماتوريدية">الماتوريدية</option>
+                    <option value="الفرقة الناجية">الفرقة الناجية</option>
+                    <option value="الشيعة الرافضة">الشيعة الرافضة</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Matching Answers -->
+            <div class="form-group">
+              <label>Section B: Matching Answers *</label>
+              <div class="matching-answers">
+                <div class="matching-item">
+                  <span>1. أ - الغدر </span>
+                  <input type="text" name="b1" required placeholder="أ - الغدر">
+                </div>
+                <div class="matching-item">
+                  <span>2. ب - الجبن </span>
+                  <input type="text" name="b2" required placeholder="ب - الجبن">
+                </div>
+                <div class="matching-item">
+                  <span>3. ج - الكذب </span>
+                  <input type="text" name="b3" required placeholder="ج - الكذب">
+                </div>
+                <div class="matching-item">
+                  <span>4. د - البخل </span>
+                  <input type="text" name="b4" required placeholder="د - البخل">
+                </div>
+                <div class="matching-item">
+                  <span>5. هـ - سوء الجوار </span>
+                  <input type="text" name="b5" required placeholder="هـ - سوء الجوار">
+                </div>
+                <div class="matching-item">
+                  <span>6. و - الفجور , والفاحشة , والدناءة </span>
+                  <input type="text" name="b6" required placeholder="و - الفجور , والفاحشة , والدناءة">
+                </div>
+                <div class="matching-item">
+                  <span>7. ز - الخيانة </span>
+                  <input type="text" name="b7" required placeholder="ز - الخيانة">
+                </div>
+                <div class="matching-item">
+                  <span>8. ح - الوقاحة </span>
+                  <input type="text" name="b8" required placeholder="ح - الوقاحة">
+                </div>
+              </div>
+            </div>
+            
+            <!-- True/False Answers -->
+            <div class="form-group">
+              <label>Section C: True/False Answers *</label>
+              <div class="tf-answers">
+                <div class="tf-item">
+                  <span>1. المسلم يقول قبل الطعام: بسم الله.</span>
+                  <label><input type="radio" name="c1" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c1" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>2. من آداب المجلس , أن لا تجالس إلا الصالحين وأهل الخير.</span>
+                  <label><input type="radio" name="c2" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c2" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>3. من آداب الإستئذان , أن تدخل بيوت الناس بغير إذن.</span>
+                  <label><input type="radio" name="c3" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c3" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>4. من آداب الطالب , أن لايحترم معلمه.</span>
+                  <label><input type="radio" name="c4" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c4" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>5. المعاملة تُبْدَأُ بالسلام قبل التطرق لأي شيئ آخر.</span>
+                  <label><input type="radio" name="c5" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c5" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>6. الطهارة: هي رفع الحدث وإزالة الخبث.</span>
+                 <label><input type="radio" name="c6" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c6" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>7. الإستجمار: هو غسل السبيلين بالماء.</span>
+                  <label><input type="radio" name="c7" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c7" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>8. نواقض الوضوء عشرة.</span>
+                  <label><input type="radio" name="c8" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c8" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>9. شروط صحة التيمم خمسة.</span>
+                  <label><input type="radio" name="c9" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c9" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                  <span>10. الصلاة: أقوال وأفعال مبتدأة بالتكبير مختتمة بالتسليم.</span>
+                  <label><input type="radio" name="c10" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c10" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                <span>11. من أركان الصلاة , قول: سمع الله لمن حمده.</span>
+                  <label><input type="radio" name="c11" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c11" value=" خطأ "> خطأ </label>
+                </div>
+                <div class="tf-item">
+                <span>12. من واجبات الصلاة : قراءة الفاتحة.</span>
+                  <label><input type="radio" name="c12" value=" صحيح" required>  صحيح</label>
+                  <label><input type="radio" name="c12" value=" خطأ "> خطأ </label>
+                </div>
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label for="answer-file">Upload additional answer file (PDF, Word, Image)</label>
+              <input type="file" id="answer-file">
+            </div>
+            <div class="exam-actions">
+              <button type="button" class="btn secondary" onclick="submitExam()">Submit Exam</button>
+              <button type="button" class="btn primary" id="auto-submit-btn" style="display: none;">Time's Up! Submitting...</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+          <!-- Payment Modal -->
+  <div id="paymentModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Options</h2>
+        <button class="modal-close" onclick="closeModal('paymentModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="payment-options">
+          <div class="payment-option" onclick="selectPayment('cbe')">
+            <div class="payment-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Commercial Bank of Ethiopia</h3>
+            <p>Pay via CBE account using QR code</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('ebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>E-Birr</h3>
+            <p>Pay via E-Birr mobile payment</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('telebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-sim-card"></i>
+            </div>
+            <h3>TeleBirr</h3>
+            <p>Pay via TeleBirr mobile payment</p>
+          </div>
+        </div>
+        
+        <div id="cbe-payment" class="payment-details" style="display: none;">
+          <h3>Commercial Bank of Ethiopia Payment</h3>
+          <div class="qr-code">
+            <img src="qr code.jpg" alt="CBE QR Code">
+          </div>
+          <p>Scan the QR code using your CBE mobile app to complete payment</p>
+          <div class="account-details">
+            <p><strong>Account Name:</strong> HUDHUD SCHOOL</p>
+            <p><strong>Account Number:</strong> 1000606221995</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('cbe')">I've Completed Payment</button>
+        </div>
+        
+        <div id="ebirr-payment" class="payment-details" style="display: none;">
+          <h3>E-Birr Payment</h3>
+          <div class="payment-instructions">
+            <div class="qr-code">
+            <img src="EBIRR.jpg" alt="E-Birr QR Code">
+            </div>
+            <p>To pay via E-Birr:</p>
+            <ol>
+              <li>Open E-Birr App</li>
+              <li>Select "Send Money"</li>
+              <li>Enter phone number: <strong>251933322685</strong></li>
+              <li>Enter amount: <span id="ebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>E-Birr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('ebirr')">I've Completed Payment</button>
+        </div>
+        
+        <div id="telebirr-payment" class="payment-details" style="display: none;">
+          <h3>TeleBirr Payment</h3>
+          <div class="payment-instructions">
+             <div class="qr-code">
+            <img src="TEL BIRR.jpg" alt="telebirr QR Code">
+            </div>
+            <p>To pay via TeleBirr:</p>
+            <ol>
+              <li>Open TeleBirr App</li>
+              <li>Select "Send Money"</li>
+              <li>Enter phone number: <strong>251933322685</strong></li>
+              <li>Enter amount: <span id="telebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>TeleBirr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('telebirr')">I've Completed Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Payment Success Modal -->
+  <div id="paymentSuccessModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Successful</h2>
+        <button class="modal-close" onclick="closeModal('paymentSuccessModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="success-animation">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Your Payment!</h3>
+        <p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
+        <div class="invoice-details">
+          <p><strong>Transaction ID:</strong> <span id="transaction-id"></span></p>
+          <p><strong>Amount Paid:</strong> <span id="amount-paid"></span></p>
+          <p><strong>Date:</strong> <span id="payment-date"></span></p>
+        </div>
+        <button class="btn primary" onclick="downloadInvoice()">Download Invoice</button>
+        <button class="btn secondary" onclick="closeModal('paymentSuccessModal')">Close</button>
+      </div>
+    </div>
+  </div>
+
+   <div id="portal-content" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Options</h2>
+        <button class="modal-close" onclick="closeModal('paymentModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="payment-options">
+          <div class="payment-option" onclick="selectPayment('cbe')">
+            <div class="payment-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <h3>Commercial Bank of Ethiopia</h3>
+            <p>Pay via CBE account using QR code</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('ebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <h3>E-Birr</h3>
+            <p>Pay via E-Birr mobile payment</p>
+          </div>
+          
+          <div class="payment-option" onclick="selectPayment('telebirr')">
+            <div class="payment-icon">
+              <i class="fas fa-sim-card"></i>
+            </div>
+            <h3>TeleBirr</h3>
+            <p>Pay via TeleBirr mobile payment</p>
+          </div>
+        </div>
+        
+        <div id="cbe-payment" class="payment-details" style="display: none;">
+          <h3>Commercial Bank of Ethiopia Payment</h3>
+          <div class="qr-code">
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48cmVjdCB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgZmlsbD0iI2ZmZiIvPjxwYXRoIGQ9Ik01MCA1MEgxNTBWMTUwSDUwVjUwWiIgZmlsbD0iIzJFN0QzMiIvPjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNmZmYiPkNCRSBQQVlNRU5UPC90ZXh0Pjwvc3ZnPg==" alt="CBE QR Code">
+          </div>
+          <p>Scan the QR code using your CBE mobile app to complete payment</p>
+          <div class="account-details">
+            <p><strong>Account Name:</strong> HUDHUD SCHOOL</p>
+            <p><strong>Account Number:</strong> 1000606221995</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('cbe')">I've Completed Payment</button>
+        </div>
+        
+        <div id="ebirr-payment" class="payment-details" style="display: none;">
+          <h3>E-Birr Payment</h3>
+          <div class="payment-instructions">
+            <p>To pay via E-Birr:</p>
+            <ol>
+              <li>Dial *812#</li>
+              <li>Select "Payment"</li>
+              <li>Select "HUDHUD SCHOOL"</li>
+              <li>Enter amount: <span id="ebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>E-Birr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('ebirr')">I've Completed Payment</button>
+        </div>
+        
+        <div id="telebirr-payment" class="payment-details" style="display: none;">
+          <h3>TeleBirr Payment</h3>
+          <div class="payment-instructions">
+            <p>To pay via TeleBirr:</p>
+            <ol>
+              <li>Open TeleBirr App</li>
+              <li>Select "Send Money"</li>
+              <li>Enter phone number: <strong>251933322685</strong></li>
+              <li>Enter amount: <span id="telebirr-amount"></span></li>
+              <li>Confirm transaction with your PIN</li>
+            </ol>
+          </div>
+          <div class="account-details">
+            <p><strong>TeleBirr Number:</strong> 251933322685</p>
+          </div>
+          <button class="btn primary" onclick="simulatePayment('telebirr')">I've Completed Payment</button>
+        </div>
+      </div>
+    </div>
+  </div>
+			
+
+		  <!-- Music Player -->
+  <div id="music-player" class="music-player">
+    <div class="player-controls">
+      <button id="play-pause"><i class="fas fa-play"></i></button>
+      <button id="prev-song"><i class="fas fa-step-backward"></i></button>
+      <button id="next-song"><i class="fas fa-step-forward"></i></button>
+      <div class="track-info">
+        <span id="track-title">Relax by Quran</span>
+        <div class="progress-bar">
+          <div class="progress"></div>
+        </div>
+      </div>
+      <button id="mute-unmute"><i class="fas fa-volume-up"></i></button>
+      <input type="file" id="music-upload" accept="audio/*" style="display: none;" multiple>
+      <button id="upload-music"><i class="fas fa-upload"></i></button>
+    </div>
+  </div>			
+
+  <!-- Payment Success Modal -->
+  <div id="paymentSuccessModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Payment Successful</h2>
+        <button class="modal-close" onclick="closeModal('paymentSuccessModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="success-animation">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <h3>Thank You for Your Payment!</h3>
+        <p>Your payment has been processed successfully. A receipt has been sent to your email.</p>
+        <div class="invoice-details">
+          <p><strong>Transaction ID:</strong> <span id="transaction-id"></span></p>
+          <p><strong>Amount Paid:</strong> <span id="amount-paid"></span></p>
+          <p><strong>Date:</strong> <span id="payment-date"></span></p>
+        </div>
+        <button class="btn primary" onclick="downloadInvoice()">Download Invoice</button>
+        <button class="btn secondary" onclick="closeModal('paymentSuccessModal')">Close</button>
+      </div>
+    </div>
+  </div>
+   </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <div class="brand">
+            <img src="hudhud new logo.png" alt="Hudhud Islamic College Logo" class="logo"/>
+            <div class="brand-text">
+              <h3>HUDHUD ISLAMIC COLLEGE</h3>
+              <p>Quality Islamic Education for Modern Times</p>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://t.me/hudhudislamiccollege"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://t.me/hudhudislamiccollege"><i class="fab fa-telegram"></i></a>
+            <a href="https://t.me/hudhudislamiccollege"><i class="fab fa-instagram"></i></a>
+            <a href="https://t.me/hudhudislamiccollege"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/251933322685" target="_blank"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#documents">Document Services</a></li>
+            <li><a href="#live-classes">Live Classes</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Admissions</h4>
+          <ul>
+            <li><a href="#apply">Apply Now</a></li>
+            <li><a href="#programs">Programs Offered</a></li>
+            <li><a href="#documents">Document Requirements</a></li>
+            <li><a href="#donate">Scholarships</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4>Contact Us</h4>
+          <div class="contact-info">
+            <p><i class="fas fa-map-marker-alt"></i> Dire Dawa,Addis Ababa, Ethiopia</p>
+            <p><i class="fas fa-phone"></i> +251 251 129 75</p>
+            <p><i class="fas fa-envelope"></i> hudhudislamicschool@gmail.com</p>
+            <p><i class="fab fa-whatsapp"></i> +251 933 322 685</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 hudhudislamiccollege. All rights reserved.</p>
+        <div class="footer-links">
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Auth Modal -->
+  <div id="authModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Student Portal Access</h2>
+        <button class="modal-close" onclick="closeModal('authModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" data-tab="login">Login</button>
+          <button class="auth-tab" data-tab="register">Register</button>
+        </div>
+        
+        <div class="auth-content active" id="login-content">
+          <form id="loginForm" class="form">
+            <div class="form-group">
+              <label for="login-email">Email Address</label>
+              <input id="login-email" name="email" type="email" required placeholder="Your email address" />
+            </div>
+            <div class="form-group">
+              <label for="login-password">Password</label>
+              <input id="login-password" name="password" type="password" required placeholder="Your password" />
+            </div>
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" id="remember-me" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn primary full-width">Login to Portal</button>
+          </form>
+        </div>
+        
+        <div class="auth-content" id="register-content">
+          <form id="registerForm" class="form">
+            <div class="grid two">
+              <div class="form-group">
+                <label for="reg-firstName">First Name</label>
+                <input id="reg-firstName" name="firstName" required placeholder="Your first name" />
+              </div>
+              <div class="form-group">
+                <label for="reg-lastName">Last Name</label>
+                <input id="reg-lastName" name="lastName" required placeholder="Your last name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg-email">Email Address</label>
+              <input id="reg-email" name="email" type="email" required placeholder="Your email address" />
+            </div>
+            <div class="grid two">
+              <div class="form-group">
+                <label for="reg-password">Password</label>
+                <input id="reg-password" name="password" type="password" required placeholder="Create a password" />
+              </div>
+              <div class="form-group">
+                <label for="reg-confirmPassword">Confirm Password</label>
+                <input id="reg-confirmPassword" name="confirmPassword" type="password" required placeholder="Confirm your password" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="reg-program">Program of Interest</label>
+              <select id="reg-program" name="program" required>
+                <option value="" disabled selected>Select a program</option>
+                <optgroup label="Certificate Programs">
+                  <option value="Computer Skills">Computer Skills</option>
+                  <option value="Arabic Language">Arabic Language</option>
+                  <option value="English Language">English Language</option>
+                  <option value="Graphic Design">Graphic Design</option>
+                </optgroup>
+                <optgroup label="Diploma Programs">
+                  <option value="Higher Diploma in Islamic Studies">Higher Diploma in Islamic Studies</option>
+                  <option value="Quran Studies">Quran Studies</option>
+                  <option value="Islamic Finance">Islamic Financing and Management</option>
+                </optgroup>
+                <optgroup label="Degree Programs">
+                  <option value="BA Islamic Studies">Bachelor of Arts in Islamic Studies</option>
+                  <option value="BQuran Memorization">Bachelor of Quran Memorization</option>
+                  <option value="BSc Islamic Economics">Bachelor of Science in Islamic Economics</option>
+                </optgroup>
+              </select>
+            </div>
+            <div class="form-options">
+              <label class="checkbox">
+                <input type="checkbox" id="terms-agree" required />
+                <span>I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></span>
+              </label>
+            </div>
+            <button type="submit" class="btn primary full-width">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Document Order Modal -->
+  <div id="orderModal" class="modal" style="display: none;">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Order <span id="document-type">Document</span></h2>
+        <button class="modal-close" onclick="closeModal('orderModal')">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="orderForm" class="form">
+          <div class="grid two">
+            <div class="form-group">
+              <label for="order-name">Full Name</label>
+              <input id="order-name" name="name" required placeholder="Your full name" />
+            </div>
+            <div class="form-group">
+              <label for="order-email">Email Address</label>
+              <input id="order-email" name="email" type="email" required placeholder="Your email address" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="order-details">Document Details</label>
+            <textarea id="order-details" name="details" rows="4" required placeholder="Please provide details about your document requirements, including topic, length, formatting requirements, and deadline..."></textarea>
+          </div>
+          <div class="form-group">
+            <label for="order-files">Upload Reference Materials (Optional)</label>
+            <input type="file" id="order-files" multiple />
+          </div>
+          <button type="submit" class="btn primary full-width">Submit Order Request</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+		<!-- Add these to your head section -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>
